@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+body, html {
+    padding: 0;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(148%2c 193%2c 32%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c427.308C89.117%2c443.384%2c185.132%2c454.733%2c265.809%2c413.607C349.319%2c371.036%2c424.838%2c294.044%2c442.142%2c201.92C458.97%2c112.331%2c378.405%2c36.796%2c353.032%2c-50.758C332.208%2c-122.612%2c343.465%2c-200.581%2c306.627%2c-265.694C264.606%2c-339.969%2c214.474%2c-429.388%2c130.434%2c-444.217C45.612%2c-459.184%2c-18.127%2c-366.82%2c-99.033%2c-337.274C-172.678%2c-310.38%2c-266.985%2c-334.876%2c-321.984%2c-279.001C-377.232%2c-222.872%2c-369.9%2c-132.671%2c-377.58%2c-54.288C-384.932%2c20.75%2c-395.889%2c97.92%2c-365.685%2c167.003C-335.248%2c236.618%2c-272.478%2c283.608%2c-210.58%2c327.669C-146.009%2c373.633%2c-78.001%2c413.237%2c0%2c427.308' fill='%23769a1a'%3e%3c/path%3e%3cpath d='M1440 1040.343C1553.53 1034.366 1662.777 1107.845 1772.155 1076.8429999999998 1898.503 1041.031 2041.626 978.871 2089.004 856.39 2136.503 733.597 2044.9279999999999 603.937 2003.4160000000002 478.993 1969.117 375.76 1931.316 277.671 1867.465 189.60000000000002 1798.476 94.44200000000001 1735.026-30.011999999999944 1619.339-50.77099999999996 1503.17-71.61599999999999 1415.427 57.511000000000024 1301.416 88.02699999999999 1183.077 119.702 1043.305 58.579999999999984 943.8050000000001 130.04399999999998 840.483 204.253 785.368 337.74 777.003 464.675 768.872 588.064 846.195 695.254 899.196 806.977 951.376 916.97 972.804 1064.804 1084.583 1113.039 1197.907 1161.94 1316.746 1046.8310000000001 1440 1040.343' fill='%23addd31'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    }
+
+
+/*************************/
+/* REGISTRATION          */
+/*************************/
+
+.login {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.login h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.login form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+    width: 310px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+   margin-top: 20px;
+    background-color: #3274d6;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+  background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+
+
+body.loggedin {
+  background-color: #f3f4f7;
+}
+
+
+
+
+.register {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.register h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+    font-family: 'Montserrat' !important;
+}
+.register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+.register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+   height: 50px;
+    background-color: #94c120;
+    color: #ffffff;
+    font-family: 'Montserrat' !important;
+}
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+    width: 310px;
+    height: 48px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    transition: 0.25s ease-in-out;
+    outline: none;
+    font-family: 'Montserrat' !important;
+}
+.register form input[type="password"]:focus, .register form input[type="text"]:focus {
+    border: 1px solid #94c120;
+    transition: 0.25s ease-in-out;
+}
+
+.register form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #94c120;
+   border: 0;
+    cursor: pointer;
+    color: #ffffff;
+    transition: background-color 0.2s;
+    font-family: 'Montserrat' !important;
+}
+.register form input[type="submit"]:hover {
+  background-color: #7ca21d;
+    transition: background-color 0.2s;
+}
+
+::-webkit-input-placeholder {
+ text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+ text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+ text-align: center;  
+}
+
+:-ms-input-placeholder {  
+ text-align: center; 
+}
+
+
+.msg-bvn-admin {
+        color: white;
+        font-size: 24px;
+        font-family: 'Poppins';
+        margin: auto;
+        text-align: center;
+        margin-top: 50px;
+}
+
+.msg-bvn-admin span {
+    font-size: 24px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #ffffff, #010201);
+    background-size: 600% 600%;
+    border-radius: 9px;
+    -webkit-animation: AnimationName 8s ease-in-out infinite;
+    -moz-animation: AnimationName 8s ease-in-out infinite;
+    -o-animation: AnimationName 8s ease-in-out infinite;
+    animation: AnimationName 8s ease-in-out infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.container {
+    width: 80vw;
+    margin: auto;
+    display: block;
+    margin-top: 120px;
+}
+
+.bg-vert {
+    background-color: #94c120;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+
+.small-margin {
+    margin-top: 20px !important;
+}
+
+.liste-article {
+    background-color: #fff;
+    color: #94c120 !important;
+    margin:auto;
+    margin-top: 70px;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 8px;
+    width: 90%;
+}
+
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.child {
+    background: white;
+    padding: 0px 0px 30px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    color: #94c120;
+}
+
+.child h5 {
+    padding: 12px 12px 0px 12px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+}
+
+.child p {
+    font-size: 13px;
+    padding: 12px;
+    margin: 12px;
+    font-weight: 400;
+    text-align: center;
+}
+
+fieldset {
+    outline: none;
+    border: none;
+}
+
+summary:hover {
+    cursor: pointer !important;
+}
+
+.child .i {
+    margin: auto;
+    text-align: center;
+    display: block;
+    color: white;
+    background: #60820a;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px;
+}
+
+.button-child {
+    border: 1px solid #94c120;
+    border-radius: 15px;
+    margin: auto;
+    display: flex;
+    padding: 8px;
+    transition: 0.25s ease-in-out;
+    color: #94c120;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.button-child i {
+    padding-left: 10px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+.button-child:hover {
+    background-color: #94c120;
+    transition: 0.25s ease-in-out;
+    color: white;
+}
+
+.admin-register {
+    background-color: #4b640d;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+}
+
+.admin-register input {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    transition: 0.25s ease-in-out;
+}
+
+
+.admin-register input[type=submit] {
+    background-color: #94c120;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    
+}
+
+.admin-register input[type=submit]:hover {
+    background-color: #7ca21d;
+    transition: 0.25s ease-in-out;
+}
+
+.liste-admin {
+    display:block;
+    margin:auto;
+    margin-top:80px;
+    text-align:center;
+}
+
+.liste-admin div {
+    background: white;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 400px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.liste-admin div form p, .liste-admin div form button {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.liste-admin div form {
+    display: inline-block !important;
+}
+
+.liste-admin div form button {
+    border: none;
+    background-color: #94c120;
+    outline: none;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.25s ease-in-out;
+}
+
+.liste-admin div form button:hover {
+    background-color: #7ca21d;
+    transition: 0.25s ease-in-out;
+}
+
+.msg-bvn-admin2 {
+    color: #94c120;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.msg-bvn-admin a {
+    text-decoration: none;
+    color: rgb(3, 175, 3);
+    margin-left: 22px;
+    transition: 0.20s ease-in-out;
+}
+
+.msg-bvn-admin a:hover {
+    color: rgb(201, 0, 0);
+    transition: 0.20s ease-in-out;
+}
+
+
+.bar-nav-admin {
+    text-align:center;
+    list-style-type:none;
+    background-color: white;
+    width: 250px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.bar-nav-admin a {
+    color: #94c120;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+
+.card {
+    max-width: 300px;
+    margin: auto;
+}
+
+.card img {
+    max-width: 200px;
+    margin: auto;
+}
+
+details summary::-webkit-details-marker {
+    display:none;
+  }
+
+.addArticle input::-webkit-input-placeholder, .addArticle textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+  .addArticle input, .addArticle textarea, .addArticle button {
+    display: inline-block;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #94c120;
+    border-radius: 20px;
+    padding: 8px;
+    border:none;
+    color: white;
+    outline: none;
+    font-family: 'Poppins';
+    transition: 0.25s ease-in-out;
+  }
+
+  .addArticle input, .addArticle button {
+    text-align: center;
+  }
+
+  .addArticle button:hover {
+    background-color: #7ca21d;
+    transition: 0.25s ease-in-out;
+  }
+
+  .PopUp {
+    background-color: #fff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    z-index: 2000;
+    display: fixed;
+    border-radius: 20px;
+    padding: 50px;
+  }
+
+  .modifierArticle {
+    display: none;
+  }
+  .showing {
+    display: block !important;
+  }
+
+  .margin {
+    margin: 150px;
+  }
+

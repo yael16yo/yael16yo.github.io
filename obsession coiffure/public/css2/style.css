@@ -1,0 +1,261 @@
+/*************************/
+/* REGISTRATION          */
+/*************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body{
+  	box-sizing: border-box;
+  	font-family: 'Poppins' !important;
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	  padding: 0;
+	  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(148%2c 193%2c 32%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c427.308C89.117%2c443.384%2c185.132%2c454.733%2c265.809%2c413.607C349.319%2c371.036%2c424.838%2c294.044%2c442.142%2c201.92C458.97%2c112.331%2c378.405%2c36.796%2c353.032%2c-50.758C332.208%2c-122.612%2c343.465%2c-200.581%2c306.627%2c-265.694C264.606%2c-339.969%2c214.474%2c-429.388%2c130.434%2c-444.217C45.612%2c-459.184%2c-18.127%2c-366.82%2c-99.033%2c-337.274C-172.678%2c-310.38%2c-266.985%2c-334.876%2c-321.984%2c-279.001C-377.232%2c-222.872%2c-369.9%2c-132.671%2c-377.58%2c-54.288C-384.932%2c20.75%2c-395.889%2c97.92%2c-365.685%2c167.003C-335.248%2c236.618%2c-272.478%2c283.608%2c-210.58%2c327.669C-146.009%2c373.633%2c-78.001%2c413.237%2c0%2c427.308' fill='%23769a1a'%3e%3c/path%3e%3cpath d='M1440 1040.343C1553.53 1034.366 1662.777 1107.845 1772.155 1076.8429999999998 1898.503 1041.031 2041.626 978.871 2089.004 856.39 2136.503 733.597 2044.9279999999999 603.937 2003.4160000000002 478.993 1969.117 375.76 1931.316 277.671 1867.465 189.60000000000002 1798.476 94.44200000000001 1735.026-30.011999999999944 1619.339-50.77099999999996 1503.17-71.61599999999999 1415.427 57.511000000000024 1301.416 88.02699999999999 1183.077 119.702 1043.305 58.579999999999984 943.8050000000001 130.04399999999998 840.483 204.253 785.368 337.74 777.003 464.675 768.872 588.064 846.195 695.254 899.196 806.977 951.376 916.97 972.804 1064.804 1084.583 1113.039 1197.907 1161.94 1316.746 1046.8310000000001 1440 1040.343' fill='%23addd31'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  min-height: 100vh;
+	  margin: 0;
+}
+
+.login {
+  	width: 400px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  	margin: 100px auto;
+}
+.login h1 {
+  	text-align: center;
+  	color: #5b6574;
+  	font-size: 24px;
+  	padding: 20px 0 20px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+.login form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+.login form label {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	width: 50px;
+  	height: 50px;
+  	background-color: #94c120;
+  	color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"] {
+  	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+.login form input[type="submit"] {
+  	width: 100%;
+  	padding: 15px;
+ 	margin-top: 20px;
+  	background-color: #94c120;
+  	border: 0;
+  	cursor: pointer;
+  	font-weight: bold;
+  	color: #ffffff;
+  	transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover {
+	background-color: #79a40d;
+  	transition: background-color 0.2s;
+}
+
+.navtop {
+	background-color: #2f3947;
+	height: 60px;
+	width: 100%;
+	border: 0;
+}
+.navtop div {
+	display: flex;
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+}
+.navtop div h1, .navtop div a {
+	display: inline-flex;
+	align-items: center;
+}
+.navtop div h1 {
+	flex: 1;
+	font-size: 24px;
+	padding: 0;
+	margin: 0;
+	color: #eaebed;
+	font-weight: normal;
+}
+.navtop div a {
+	padding: 0 20px;
+	text-decoration: none;
+	color: #c1c4c8;
+	font-weight: bold;
+}
+.navtop div a i {
+	padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+	color: #eaebed;
+}
+body.loggedin {
+	background-color: #f3f4f7;
+}
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+.content h2 {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 22px;
+	border-bottom: 1px solid #e0e0e3;
+	color: #4a536e;
+}
+.content > p, .content > div {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+	margin: 25px 0;
+	padding: 25px;
+	background-color: #fff;
+}
+.content > p table td, .content > div table td {
+	padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+	font-weight: bold;
+	color: #4a536e;
+	padding-right: 15px;
+}
+.content > div p {
+	padding: 5px;
+	margin: 0 0 10px 0;
+}
+
+* {
+  	box-sizing: border-box;
+  	font-family: 'Poppins';
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+.register {
+  	width: 400px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  	margin: 100px auto;
+}
+.register h1 {
+  	text-align: center;
+  	color: #5b6574;
+  	font-size: 24px;
+  	padding: 20px 0 20px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+.register form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+.register form label {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	width: 50px;
+ 	height: 50px;
+  	background-color: #94c120;
+  	color: #ffffff;
+}
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+  	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+.register form input[type="submit"] {
+  	width: 100%;
+  	padding: 15px;
+  	margin-top: 20px;
+  	background-color: #94c120;
+ 	border: 0;
+  	cursor: pointer;
+  	font-weight: bold;
+  	color: #ffffff;
+  	transition: background-color 0.2s;
+}
+
+.register form input:hover, .login form input:hover {
+	transition: 0.25s ease-in-out;
+}
+
+.register form input:hover, .login form input:hover {
+	border: 1px solid #94c120;
+	transition: 0.25s ease-in-out;
+}
+.register form input:focus, .login form input:focus {
+	border: 1px solid #94c120;
+	outline: none;
+}
+
+.register form input[type="submit"]:hover {
+	background-color: #79a40d;
+  	transition: background-color 0.2s;
+}
+
+.contain_notyet {
+  text-align: center;
+}
+
+.text_notyet {
+  color: white;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.text_notyet:hover {
+    color: #e9e9e9;
+}
+
+.label_text {
+  font-size: 24px;
+  margin-bottom: -20px;
+}
+
+.justify_center{
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+
+
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+

@@ -1,0 +1,74 @@
+<form action="" method="GET">
+            <div class="form-white">
+            <label for="sexe" class="label-types">Sexe :</label>
+            <select name="sexe" id="sexe" class="select-types">
+                <option value="">Tous <i class="fa fa-chevron-down"></i></option>
+                <option value="homme">Homme</option>
+                <option value="femme">Femme</option>
+            </select>
+
+            <label for="capacity" class="label-types">Capacité :</label>
+            <select name="capacity" id="capacity" class="select-types">
+                <option value="">Toutes <i class="fa fa-chevron-down"></i></option>
+                <option value="30">30ml</option>
+                <option value="50">50ml</option>
+                <option value="100">100ml</option>
+            </select>
+
+            <label for="article_price">Prix :</label>
+            <input type="range" name="article_price" id="article_price" value="0" min="0" max="100" step="5" oninput="updatePriceValue()"><span id="price-value">0</span>€
+            <script>
+                function updatePriceValue() {
+                    var priceInput = document.getElementById('article_price');
+                    var priceValueSpan = document.getElementById('price-value');
+                    priceValueSpan.textContent = priceInput.value;
+                }
+            </script>
+            </div>
+        <div class="button_rr">
+            <button type="submit"> <i style="margin:0px 10px;" class="fa fa-magnifying-glass"></i> </button>
+        </div>
+        <?php 
+                $sexe = isset($_GET['sexe']) ? $_GET['sexe'] : '';
+                $capacity = isset($_GET['capacity']) ? $_GET['capacity'] : '';
+                $article_price = isset($_GET['article_price']) ? $_GET['article_price'] : '';
+                
+                $query = "SELECT * FROM `products` WHERE 1";
+    
+                if (!empty($sexe)) {
+                    $query .= " AND sexe = '$sexe'";
+                    $response1 = "<strong>".$sexe."</strong>";
+                } else {
+                    $response1 = "";
+                }
+                
+    
+                if (!empty($capacity)) {
+                    $query .= " AND capacity = '$capacity'";
+                    $response2 = "<strong>".$capacity."ml</strong>";
+                } else {
+                    $response2 = "";
+                }
+    
+                if (!empty($article_price)) {
+                    $query .= " AND article_price <= '$article_price'";
+                    $response3 = "moins de <strong>".$article_price."€</strong>";
+                } else {
+                    $response3 = "";
+                }
+    
+                $bd = $access->prepare($query);
+                $bd->execute(array());
+                $fetchArticles = $bd->fetchAll(PDO::FETCH_ASSOC);
+
+                $count = $bd->rowCount();
+                if(empty($sexe) && empty($capacity) && empty($article_price)) {
+                    $error_message_search = "";
+                } else {
+                    $error_message_search = "Les résultats concernant votre recherche pour ".$response1." ".$response2." ".$response3."";
+                }
+                ?>
+                <div class="message_erreur">
+                    <p><?php echo $error_message_search;?></p>
+                </div>
+    </form>

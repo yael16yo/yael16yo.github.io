@@ -1,0 +1,131 @@
+*, ::after, ::before {
+    box-sizing:unset !important;
+}
+/*Police d'écriture*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+.link2 {
+    width: fit-content;
+    display: block;
+    text-decoration: 0;
+    background-color: fff;
+    color: #94c120;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 30px;
+    font-family: 'Poppins';
+}
+
+.span {
+    position: absolute;
+    top: 44px;
+    right: 3px;
+    background-color: #94c120;
+    height: 20px;
+    width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+}
+.products_list {
+    margin: 100px auto;
+    position: absolute;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+    grid-gap: 25px;
+}
+.product {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.product:hover {
+    transform: scale(1.1);
+}
+.image_product {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image_product img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    padding: 20px;
+}
+.content {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    height: fit-content;
+    text-align: center;
+}
+.price {
+    margin: 15px 0;
+    font-weight: 400;
+    color: #94c120;
+}
+.id_product {
+    text-align: center;
+    text-decoration: 0;
+    background-color: #37a6ff;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 10px  10%;
+    border-radius: 6px;
+}
+/*Panier CSS*/
+.panier {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+.panier img {
+    width: 40px;
+    padding: 8px 0;
+}
+.panier section {
+    width: 70%;
+    display: block;
+    margin: auto;
+    
+    padding: 10px;
+    border-radius: 6px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+th {
+    padding: 10px 0;
+    font-weight: 400;
+}
+td {
+    border-top: 0.5px solid #999;
+    text-align: center;
+    color: #94c120;
+}
+tr {
+    border-bottom: 0.5px solid #999;
+}
+
+.total th {
+    border: 0;
+    float: left;
+    margin-left: 10px;
+    font-weight: 500;
+    color: #94c120;
+    padding: 10px;
+    width: 200px;
+}
