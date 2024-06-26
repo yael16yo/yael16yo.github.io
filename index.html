@@ -14,6 +14,12 @@
     <meta property="og:url" content="https://yael16yo.github.io/">
     <meta property="og:image" content="https://yael16yo.github.io/assets/images/nina.webp">
 
+    <meta property="instagram:card" content="summary_large_image">
+    <meta property="instagram:site" content="@ninacarducci.photo">
+    <meta property="instagram:title" content="Portfolio of Nina Carducci - Photographer">
+    <meta property="instagram:description" content="Discover the portfolio of Nina Carducci, photographer specialising in portraits, weddings and events.">
+    <meta property="instagram:image" content="https://yael16yo.github.io/assets/images/nina.webp">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
     <link href="https://fonts.googleapis.com" crossorigin="anonymous">
@@ -26,33 +32,59 @@
           "@context": "http://schema.org",
           "@type": "Person",
           "name": "Nina Carducci",
-          "jobTitle": "Photographer",
-          "url": "https://yael16yo.github.io/",
-          "sameAs": [
-            "https://www.instagram.com/ninacarducci.photo/?hl=fr"
-          ],
-          "image": "https://yael16yo.github.io/assets/images/nina.webp",
-          "description": "Nina Carducci is a professional photographer specializing in portraits, weddings, and events.",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "Freelance"
-          },
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "68 avenue Alsace-Lorraine",
             "addressLocality": "Bordeaux",
             "addressRegion": "Nouvelle-Aquitaine",
-            "postalCode": "33200",
-            "addressCountry": "France"
+            "postalCode": "33200"
           },
-          "telephone": "+33 5 56 67 78 89",
-          "openingHours": "Mo-Fr 10:00-19:00"
+          "telephone": "05 56 67 78 89",
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "10:00",
+            "closes": "19:00"
+          }
         }
         </script>
-</head>
-<body>
-<div class="top-header" itemscope itemtype="http://schema.org/Person">
-    <h1 class="name" itemprop="name">Nina Carducci</h1>
+    
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+    <div itemscope itemtype="http://schema.org/Person" class="hidden">
+        <span itemprop="name">Nina Carducci</span>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+            <span itemprop="streetAddress">68 avenue Alsace-Lorraine</span>
+            <span itemprop="addressLocality">Bordeaux</span>,
+            <span itemprop="addressRegion">Nouvelle-Aquitaine</span>
+            <span itemprop="postalCode">33200</span>
+        </div>
+        <span itemprop="telephone">05 56 67 78 89</span>
+        <div itemprop="openingHoursSpecification" itemscope itemtype="http://schema.org/OpeningHoursSpecification">
+            <meta itemprop="dayOfWeek" content="Monday" />
+            <meta itemprop="dayOfWeek" content="Tuesday" />
+            <meta itemprop="dayOfWeek" content="Wednesday" />
+            <meta itemprop="dayOfWeek" content="Thursday" />
+            <meta itemprop="dayOfWeek" content="Friday" />
+            <meta itemprop="opens" content="10:00" />
+            <meta itemprop="closes" content="19:00" />
+            <span>Opening Hours: Monday to Friday, 10:00 - 19:00</span>
+        </div>
+    </div>
+    
+<div class="top-header">
+    <h1 class="name">Nina Carducci</h1>
     <nav class="nav">   
         <ul>
             <li><a href="#about">About</a></li>
