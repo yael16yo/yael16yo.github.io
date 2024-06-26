@@ -1,5 +1,5 @@
-@import url("fonts/Inter/static/Inter-Regular.ttf.zip");
-@import url("fonts/Spectral/Spectral-Regular.ttf.zip");
+@import url("fonts/Inter/static/Inter-Regular.ttf");
+@import url("fonts/Spectral/Spectral-Regular.ttf");
 
 body {
 	max-width: 1920px;
