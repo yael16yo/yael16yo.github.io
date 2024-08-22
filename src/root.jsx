@@ -30,9 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <HashRouter>
-    <React.StrictMode>
-      <RouterProvider router={router} />
-    </React.StrictMode>
-  </HashRouter>
+  <React.StrictMode>
+      <HashRouter>
+        <RouterProvider router={router} />
+      </HashRouter>
+  </React.StrictMode>
 );
