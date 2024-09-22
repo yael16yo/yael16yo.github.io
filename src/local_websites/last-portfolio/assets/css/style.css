@@ -146,6 +146,7 @@ section:nth-child(even) {
 }
 
 .navbar__wrapper_phone {
+  z-index: 5;
   position: fixed;
   right: 15px;
   top: 15px;
@@ -585,10 +586,11 @@ section:nth-child(even) {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .swiper {
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
   height: 400px;
 }

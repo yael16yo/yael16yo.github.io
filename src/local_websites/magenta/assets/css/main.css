@@ -1,0 +1,460 @@
+@import url("/assets/nuku-nuku/nuku1.ttf");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-font: "Montserrat";
+  --title-font: "Nuku Nuku";
+  --first-color: #111111;
+  --white-color: #ffffff;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: var(--first-color);
+  font-family: var(--main-font);
+  scroll-behavior: smooth;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 72%;
+  }
+  50% {
+    background-position: 100% 29%;
+  }
+  100% {
+    background-position: 0% 72%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 72%;
+  }
+  50% {
+    background-position: 100% 29%;
+  }
+  100% {
+    background-position: 0% 72%;
+  }
+}
+@keyframes Gradient {
+  0% {
+    background-position: 0% 72%;
+  }
+  50% {
+    background-position: 100% 29%;
+  }
+  100% {
+    background-position: 0% 72%;
+  }
+}
+
+.wrapper {
+  padding: 60px;
+  min-height: 100vh;
+  display: flex;
+}
+
+.wrapper__navbar {
+  top: 2rem;
+  height: 50px;
+  width: 70%;
+  position: fixed;
+  background-image: url(/assets/img/gradient.gif);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.wrapper__navbar__a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.wrapper__navbar__a::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  border-radius: 4px;
+  bottom: -6px;
+  left: 0;
+  transform-origin: right;
+  background-color: var(--white-color);
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+
+.wrapper__navbar__a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.active__link {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.active__link::before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  border-radius: 4px;
+  bottom: -6px;
+  left: 0;
+  transform-origin: right;
+  background-color: var(--white-color);
+  transform: scaleX(1);
+}
+
+.wrapper__header {
+  width: 100%;
+  height: 80vh;
+  border-radius: 3rem;
+  background-image: url("/assets/img/aaabstract.webp");
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  padding: 30px;
+}
+
+.wrapper__header__column {
+  width: 40%;
+}
+
+.button__aboutme {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 16px 24px 16px 24px;
+  border-radius: 2rem;
+  display: block;
+  width: fit-content;
+  margin-top: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button__aboutme i {
+  margin-left: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button__aboutme:hover.button__aboutme i {
+  transform: rotate(90deg);
+}
+.button__aboutme:hover {
+  background-color: #222;
+}
+
+.wrapper__header__title {
+  font-family: var(--title-font);
+  font-size: 11vw;
+}
+
+.wrapper__header__title::first-letter {
+  font-size: 1.5em;
+}
+
+.gradient_span {
+  background-image: url("/assets/img/gradient.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+}
+
+.wrapper__header__bg-profil {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 450px;
+  height: 260px;
+  padding: 2rem 0 0 2rem;
+  border-radius: 4rem 0 4rem 0;
+  background-color: var(--first-color);
+}
+
+.bg-profil__item {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(250deg, #243466, #9f19c6);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 8s ease-in-out infinite;
+  -moz-animation: Gradient 8s ease-in-out infinite;
+  animation: Gradient 8s ease-in-out infinite;
+  animation-direction: alternate;
+  background-image: url(/assets/img/gradient.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3rem 0 3rem 0;
+}
+
+.bg-profil__item__anime {
+  position: absolute;
+  bottom: 0;
+  height: 420px;
+  left: 50%;
+  margin-left: 20px;
+  transform: translateX(-50%);
+  -webkit-filter: drop-shadow(10px 10px 10px #222);
+  filter: drop-shadow(10px 10px 10px #222);
+}
+
+.wrapper__cards_portfolio {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.cards_portfolio {
+  aspect-ratio: 1 / 1;
+  transition: all 0.2s ease-in-out;
+  background-image: url("/assets/img/gradient.gif");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cards_portfolio img {
+  width: 100%;
+  height: 85%;
+  object-fit: cover;
+}
+.title__cards {
+  color: var(--white-color);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cards_portfolio:hover {
+  transform: scale(1.02);
+}
+
+.wrapper__cards_portfolio:hover .cards_portfolio:not(:hover) {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.75;
+}
+
+#portable,
+#portable__link {
+  display: none;
+}
+
+#portable {
+  color: var(--white-color);
+  padding: 20px;
+}
+
+#portable__link {
+  color: var(--first-color);
+  background-color: var(--white-color);
+  margin: auto;
+}
+
+#show__portfable__id {
+  display: none;
+}
+
+@media screen AND (max-width: 880px) {
+  .wrapper__cards_portfolio {
+    grid-template-columns: repeat(2, auto);
+  }
+  #show__portfable__id {
+    display: flex;
+  }
+  #pc,
+  #pc__link {
+    display: none;
+  }
+  #portable,
+  #portable__link {
+    display: block;
+  }
+  .wrapper__navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: unset;
+    transform: unset;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 0 0 35px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .wrapper__navbar i {
+    color: var(--white-color);
+    font-weight: 700;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+  .wrapper__navbar__a {
+    display: none;
+  }
+  #show__portfable__id {
+    width: 100%;
+  }
+}
+
+@media screen AND (max-width: 590px) {
+  .wrapper__cards_portfolio {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+
+.show__link {
+  display: flex !important;
+}
+.fa-plus {
+  transition: all 0.3s ease-in-out;
+}
+.full__nav {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  border-radius: 0;
+  overflow: hidden;
+}
+.hiddenOverflow {
+  overflow: hidden;
+}
+
+.rotate {
+  transform: rotate(45deg);
+  transform-origin: center center;
+}
+
+.wrapper__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.contact {
+  background-image: url("/assets/img/gradient.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-width: 620px;
+  border-radius: 2rem;
+  padding: 20px;
+}
+
+.contact h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 15px 0;
+  font-weight: 700;
+  color: var(--white-color);
+}
+
+.contact form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+  padding-left: 6px;
+  width: 100%;
+  border-radius: 1.25rem;
+  outline: none;
+  border: none;
+  color: var(--black-color);
+}
+
+.contact form input::-webkit-input-placeholder,
+.contact form textarea::-webkit-input-placeholder {
+  color: var(--black-color);
+  font-family: "Montserrat";
+  opacity: 0.65;
+}
+
+.contact form button {
+  color: var(--black-color);
+  font-family: "Montserrat";
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+  height: 45px;
+  background-image: url("/assets/img/aaabstract.webp");
+}
+
+.contact form button {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.contact form button:hover {
+  transform: translateY(-2px);
+}
+
+.contact form button i {
+  margin-left: 5px;
+  transform: rotate(15deg);
+  transition: all 0.25s ease-in-out;
+}
+
+.contact form button:hover > i {
+  transform: translateX(10px) rotate(15deg);
+}
+
+.contact form textarea {
+  padding-top: 6px;
+  height: 90px;
+  resize: vertical;
+}
+
+.footer {
+  text-align: center;
+  color: var(--white-color);
+  opacity: 0.7;
+  font-size: 10px;
+  display: block;
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.footer a {
+  color: var(--white-color);
+}
